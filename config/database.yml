@@ -12,7 +12,9 @@
 #       Install PostgreSQL and put its /bin directory on your path.
 #
 # Configure Using Gemfile
+
 # gem 'pg'
+
 #
 default: &default
   adapter: postgresql
@@ -22,6 +24,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
+  host: localhost
+  port: 5432
   <<: *default
   database: phase_4_deploying_demo_app_development
 
